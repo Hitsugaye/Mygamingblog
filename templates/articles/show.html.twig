@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title article.title %}
+
+{% block body %}
+
+<article>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description}}</p>
+</article>
+
+<a href="{{ path('app_home') }}">Revenir a l'acceuil</a>
+
+{% endblock %}

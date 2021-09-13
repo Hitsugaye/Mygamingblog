@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticlesController!{% endblock %}
+
+{% block body %}
+<h1>{{ pluralize(articles | length, 'Article')}} </h1>
+
+{% for article in articles %}
+
+    <article>
+        <h2><a href="{{ path('app_articles_show', {id: article.id})}}">{{ article.title }}</a></h2>
+        <p>{{ article.description }}</p>
+    </article>
+    
+{% endfor %}
+{% endblock %}
